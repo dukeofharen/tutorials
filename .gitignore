@@ -1,0 +1,8 @@
+*/.vs/*
+/DotNet.Plugin/DotNet.Plugin.Business/bin/*
+/DotNet.Plugin/DotNet.Plugin.Business/obj/*
+/DotNet.Plugin/DotNet.Plugin/bin/*
+/DotNet.Plugin/DotNet.Plugin/obj/*
+/DotNet.Plugin/DotNet.Plugin.StringPlugins/bin/*
+/DotNet.Plugin/DotNet.Plugin.StringPlugins/obj/*
+*.userprefs
