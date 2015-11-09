@@ -6,12 +6,22 @@ namespace DotNet.Plugin
 {
 	class MainClass
 	{
-		public static void Main (string[] args)
+		public static void Main(string[] args)
 		{
-			Console.WriteLine ("Started plugin app..");
-			PluginLoader loader = new PluginLoader();
-			loader.LoadPlugins();
-			while (true)
+			Console.WriteLine("Started plugin app..");
+			try
+			{
+				PluginLoader loader = new PluginLoader();
+				loader.LoadPlugins();
+			}
+			catch(Exception e)
+			{
+				Console.WriteLine(string.Format("Plugins couldn't be loaded: {0}", e.Message));
+				Console.WriteLine("Press any key to exit...");
+				Console.ReadKey();
+				Environment.Exit(0);
+			}
+            while (true)
 			{
 				try
 				{
@@ -19,7 +29,7 @@ namespace DotNet.Plugin
 					Console.Write("> ");
 					string line = Console.ReadLine();
 					string name = line.Split(new char[] { ' ' }).FirstOrDefault();
-					if(line == "exit")
+					if (line == "exit")
 					{
 						Environment.Exit(0);
 					}
@@ -35,9 +45,9 @@ namespace DotNet.Plugin
 						Console.WriteLine(string.Format("No plugin found with name '{0}'", name));
 					}
 				}
-				catch(Exception e)
+				catch (Exception e)
 				{
-					Console.WriteLine (string.Format ("Caught exception: {0}", e.Message));
+					Console.WriteLine(string.Format("Caught exception: {0}", e.Message));
 				}
 			}
 		}
