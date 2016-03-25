@@ -5,4 +5,6 @@
 /DotNet.Plugin/DotNet.Plugin/obj/*
 /DotNet.Plugin/DotNet.Plugin.StringPlugins/bin/*
 /DotNet.Plugin/DotNet.Plugin.StringPlugins/obj/*
+/Ducode.CS.Nice/Ducode.CS.Nice/bin/*
+/Ducode.CS.Nice/Ducode.CS.Nice/obj/*
 *.userprefs
